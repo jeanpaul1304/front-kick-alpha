@@ -1,0 +1,48 @@
+@import "nib"
+// Config
+@import "utilities/config.styl"
+
+// Base
+@import "base/_normalize.styl"
+@import "base/_reset.styl"
+@import "base/_icons.styl"
+@import "base/_sprite.styl"
+
+// Utilities
+// ---- Mixins
+@import "utilities/_mixins/mixins.styl"
+@import "utilities/_mixins/prefix.styl"
+@import "utilities/resource.styl"
+
+// ---- Libs
+@import "utilities/_libs/bxslider.styl"
+@import "utilities/_libs/fancybox.styl"
+@import "utilities/_libs/parsley.styl"
+@import "utilities/_libs/malihu.styl"
+
+// Layout
+//@import "layout/_loader.styl"
+@import "layout/_footer.styl"
+@import "layout/_header.styl"
+
+// Modules
+//@import "modules/index/index.styl"
+//@import "modules/us/us.styl"
+//@import "modules/terms/terms.styl"
+//@import "modules/faq/faq.styl"
+@import "modules/comunity/comunity.styl"
+//@import "modules/work/work.styl"
+//@import "modules/contact/contact.styl"
+
+// States
+@import "states/responsive/_mediaqueries.styl"
+//@import "states/responsive/_print.styl"
+
+
+// Example nib with rupture
+body
+	background linear-gradient(top, red, black)
+
++tablet()
+	body
+		background linear-gradient(top, yellow, orange)

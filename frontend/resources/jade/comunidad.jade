@@ -1,0 +1,37 @@
+//- comunity
+extends layout/layout.jade
+block content
+	#section-1__comunity
+		section
+			h2 Únete a la comunidad de repartidores
+			h3 Gana más de S/. X al día con horarios flexibles
+			a.btn.btn--skyblue.btn--big.popup(data-fancybox-type="iframe", href="unete.html") Únete
+	#section-2__comunity
+		section
+			.items-comunity
+				ul
+					li
+						figure.float-left
+							img(src="img/item-comunity.png")
+						blockquote.float-right
+							h3 Item 1
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eos cupiditate necessitatibus, incidunt nobis unde beatae nam amet sequi ex, nostrum soluta magni.
+					li
+						figure.float-right
+							img(src="img/item-comunity.png")
+						blockquote.float-left
+							h3 Item 2
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eos cupiditate necessitatibus, incidunt nobis unde beatae nam amet sequi ex, nostrum soluta magni.
+					li
+						figure.float-left
+							img(src="img/item-comunity.png")
+						blockquote.float-right
+							h3 Item 3
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eos cupiditate necessitatibus, incidunt nobis unde beatae nam amet sequi ex, nostrum soluta magni.
+block alpha
+	script.
+		window.alpha = {
+			module : 'cligo',
+			controller : 'comunity',
+			action: 'index'
+		}

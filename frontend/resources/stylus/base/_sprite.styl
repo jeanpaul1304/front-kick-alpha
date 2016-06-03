@@ -1,0 +1,89 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$bx-left_name = 'bx-left';
+$bx-left_x = 0px;
+$bx-left_y = 0px;
+$bx-left_offset_x = 0px;
+$bx-left_offset_y = 0px;
+$bx-left_width = 21px;
+$bx-left_height = 35px;
+$bx-left_total_width = 42px;
+$bx-left_total_height = 35px;
+$bx-left_image = '../img/sprite.png';
+$bx-left = 0px 0px 0px 0px 21px 35px 42px 35px '../img/sprite.png' 'bx-left';
+$bx-right_name = 'bx-right';
+$bx-right_x = 21px;
+$bx-right_y = 0px;
+$bx-right_offset_x = -21px;
+$bx-right_offset_y = 0px;
+$bx-right_width = 21px;
+$bx-right_height = 35px;
+$bx-right_total_width = 42px;
+$bx-right_total_height = 35px;
+$bx-right_image = '../img/sprite.png';
+$bx-right = 21px 0px -21px 0px 21px 35px 42px 35px '../img/sprite.png' 'bx-right';
+$spritesheet_width = 42px;
+$spritesheet_height = 35px;
+$spritesheet_image = '../img/sprite.png';
+$spritesheet_sprites = $bx-left $bx-right;
+$spritesheet = 42px 35px '../img/sprite.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}

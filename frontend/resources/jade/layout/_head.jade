@@ -1,0 +1,30 @@
+include ../config/page.jade
+include ../mixins/mixins.jade
+
+head
+	meta(charset='#{page.charset}')
+	meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+	meta(name='language', content='#{page.lang}')
+	title #{page.title}
+	meta(name='title', content='#{page.title}')
+	meta(name='description', content='#{page.description}')
+	meta(name='author', content='#{page.author}')
+	meta(name='viewport', content='#{page.viewport}')
+	meta(name='robots', content='#{page.robots}')
+	meta(name='keywords', content='#{page.keywords}')
+	meta(property='og:description', content='#{page.description}')
+	meta(property='og:image', content='#{page.og.image}')
+	meta(property='og:site_name', content='#{page.name}')
+	meta(property='og:title', content='#{page.title}')
+	meta(property='og:type', content='#{page.og.type}')
+	meta(property='og:url', content='#{page.url}')
+
+
+	link(href='#{page.static}css/all.css', media='all', rel='stylesheet', type='text/css')
+	link(href='#{page.static}img/favicon.ico', rel='shortcut icon', type='image/x-icon')
+	link(href='#{page.og.image}', rel='icon')
+
+	+ie('if lte IE 9')
+		script(src="#{page.static}js/vendor/selectivizr/selectivizr.js")
+		script(src="#{page.static}js/vendor/html5shiv/dist/html5shiv.js")
+	include _head_scripts.jade

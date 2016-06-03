@@ -1,0 +1,85 @@
+#section-1__comunity
+	position relative
+	height 390px
+	padding 150px 0 100px
+	background-image url('../img/comunidad-section-1.jpg')
+	background-repeat no-repeat
+	background-size cover
+	background-position top center
+	color reds
+	h2
+		em(37px)
+		margin-bottom 5px
+		font-family $linoMedium
+		letter-spacing 2px
+	h3
+		em(26px)
+		margin-bottom 30px
+		letter-spacing 0px
+#section-2__comunity
+	padding 70px 0
+	.items-comunity
+		> ul
+			display inline-block
+			width 620px
+			> li
+				display block
+				overflow hidden
+				margin-bottom 80px
+				blockquote
+					width 385px
+					text-align left
+					h3
+						em(30px)
+						font-family $dinBold
+						color $skyblue
+						margin-bottom 10px
+					p
+						em(18px)
+						color #b3b3b3
+						font-family $linoThin
+						line-height 1.36em
+						text-align justify
+.form-ctn-joinus
+	height 90%
+	.parsley-errors-list
+		position relative
+		padding 0
+		width auto
+		left auto
+		top auto
+		animation-name hide-alert
+		animation-duration 4s
+		&.filled
+			height 0
+			opacity 0
+			animation-name hide-alert
+			animation-duration 4s
+.join
+	.form-control, .form-checkbox
+		.form-checkbox.parsley-error
+			margin-bottom 10px
+		&:hover, &:active, &:focus
+			.filled
+				display block
+				opacity 1
+				height 20px
+			input.parsley-error
+				border-top 2px solid #999 !important
+@keyframes hide-alert
+	0%
+		display block
+		opacity 0
+		height 0px
+	33%
+		display block
+		opacity 1
+		height 20px
+	66%
+		display block
+		opacity 1
+		height 20px
+	100%
+		display none
+		opacity 0
+		height 0
