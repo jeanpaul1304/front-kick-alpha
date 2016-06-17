@@ -23,8 +23,6 @@ var
 	coffee = require('gulp-coffee'),
 	uglify = require('gulp-uglify'),
 	stylus = require('gulp-stylus'),
-	nib = require('nib'),
-	rupture = require('rupture'),
 	plumber = require('gulp-plumber'),
 	runSequence = require('run-sequence'),
 	spritesmith = require('gulp.spritesmith'),
@@ -82,7 +80,6 @@ gulp.task('stylus', function() {
 	])
 	.pipe(plumber())
 	.pipe(stylus({
-		use: [nib(), rupture()],
 		compress: true
 	}))
 	.pipe(gulp.dest(public.css));
