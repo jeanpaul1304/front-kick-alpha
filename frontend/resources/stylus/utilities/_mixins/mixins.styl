@@ -20,3 +20,8 @@ em(size, parentFontSize = 0)
 		font-size round(( size / $baseFont )em , 3)
 	else
 		font-size round(( size / parentFontSize )em , 3)
+
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
