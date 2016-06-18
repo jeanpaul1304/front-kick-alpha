@@ -1,9 +1,9 @@
 header
 	position fixed
 	width 100%
-	padding 15px 0
+	padding 15px 20px
 	z-index 999
-	background-color #473b75
+	background-color #4e9285
 	border-bottom 3px solid #85b1fb
 	box-shadow 0 0 5px #666
 	font-family $dinMedium
@@ -16,30 +16,25 @@ header
 		font-family $sacramento
 		> a
 			display block
-			color #ff8383
+			color #1b0909
 	nav
 		position absolute
-		top 8px
-		right 22%
+		top 10px
+		right 25%
 		> ul
 			> li
 				display inline-block
 				vertical-align top
 				text-align center
 				margin 0 0 0 -4px
-				&:hover
-					.flecha-up
-						opacity 1
 				> a
 					display block
 					em(12px)
 					padding 0 15px
 					height 25px
-					border-bottom 3px solid transparent
 					transition(all .3s linear 0s)
 					&:hover
 					&.active
-						border-bottom 4px solid $blue
 						color $blue
 						/*&:before
 							content '<i class="icon icon-arrow"></i>'
@@ -61,8 +56,8 @@ header
 			transition(all .3s linear 0s)
 			&:hover
 				color white
-				background $skyblue
-				border 1px solid $skyblue
+				background $blue
+				border 1px solid $blue
 .flecha-up 
 	width 0px
 	opacity 0

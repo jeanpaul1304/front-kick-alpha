@@ -25,52 +25,16 @@ define [], ->
 				actions:
 					index: ->
 						require(['modules/all/tabs', 'modules/index/initBxSlider', 'modules/index/initParallax','modules/all/initFancybox'])
-					registrate: ->
-						require(['modules/all/initMalihu'])	
 				allActions: ->
 					return
-			'faq':
-				actions:
-					index: ->
-						require(['modules/all/tabs','modules/all/initFancybox'])
-					registrate: ->
-						require(['modules/all/initMalihu'])		
-				allActions: ->
-					return
-			'us':
-				actions:
-					index: ->
-						require(['modules/all/initFancybox'])
-					registrate: ->
-						require(['modules/all/initMalihu'])		
-				allActions: ->
-					return					
-			'work':
-				actions:
-					index: ->
-						require(['modules/all/file','modules/all/initFancybox'])
-					registrate: ->
-						require(['modules/all/initMalihu'])							
-				allActions: ->
-					return
-			'comunity':
-				actions:
-					index: ->
-						require(['modules/all/initFancybox'])
-					unete: ->
-						require(['modules/all/initMalihu'])
-					registrate: ->
-						require(['modules/all/initMalihu'])							
-				allActions: ->
-					return
-			'contact':
-				actions:
-					index: ->
-						require(['modules/contact/initGoogleMaps','modules/all/initFancybox'])
-					registrate: ->
-						require(['modules/all/initMalihu'])					
-				allActions: ->
-					return
+			# 'faq':
+			# 	actions:
+			# 		index: ->
+			# 			require(['modules/all/tabs','modules/all/initFancybox'])
+			# 		registrate: ->
+			# 			require(['modules/all/initMalihu'])		
+			# 	allActions: ->
+			# 		return
 		allControllers: ->
 			require(['modules/all/initParsley'])
 			return
