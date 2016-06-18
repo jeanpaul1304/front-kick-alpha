@@ -29,27 +29,24 @@ var
 	imagemin = require('gulp-imagemin'),
 	iconfont = require('gulp-iconfont'),
 	iconfontCss = require('gulp-iconfont-css'),
-	browserSync = require('browser-sync'),
 	es = require('event-stream');
-
-var reload = browserSync.reload;
 
 // task watch
 gulp.task('watch', function() {
 	gulp.watch([
 		resources.jade + '**/*.jade',
 		resources.jade + '**/**/*.jade'
-	], ['jade', reload]);
+	], ['jade']);
 
 	gulp.watch([
 		resources.stylus + '**/*.styl',
 		resources.stylus + '**/**/*.styl'
-	], ['stylus', reload]);
+	], ['stylus']);
 
 	gulp.watch([
 		resources.coffee + '*.coffee',
 		resources.coffee + '**/*.coffee'
-	], ['coffee', reload]);
+	], ['coffee']);
 });
 
 gulp.task('jade', function() {
@@ -97,15 +94,15 @@ gulp.task('coffee', function() {
 	.pipe(gulp.dest(public.js));
 });
 
-// task browser-sync | browser-sync
-gulp.task('browser-sync', function() {
-	return browserSync.init({
-		keepalive: true,
-		server: {
-			baseDir: public.path
-		}
-	});
-});
+// // task browser-sync | browser-sync
+// gulp.task('browser-sync', function() {
+// 	return browserSync.init({
+// 		keepalive: true,
+// 		server: {
+// 			baseDir: public.path
+// 		}
+// 	});
+// });
 
 //task imagemin
 gulp.task('imagemin', function() {
@@ -173,5 +170,6 @@ gulp.task('default', function (cb) {
 
 // task server
 gulp.task('server', function (cb) {
-		runSequence('browser-sync', 'watch', cb);
+		// runSequence('browser-sync', 'watch', cb);
+		runSequence('watch');
 });
